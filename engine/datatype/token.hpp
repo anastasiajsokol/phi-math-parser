@@ -13,6 +13,8 @@ enum class TokenType {
     uop,    // unary operator
     var,    // variable
     fun,    // function
+    unt,    // unit
+
     eoi,    // end of input
 };
 
