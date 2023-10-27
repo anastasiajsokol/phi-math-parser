@@ -11,11 +11,11 @@ namespace phimath {
 template <std::input_iterator input_type, typename sentinel_type = input_type> requires std::same_as<std::iter_value_t<input_type>, char> && std::sentinel_for<sentinel_type, input_type>
 class Lexer {
     private:
-        buffered_input_wrapper stream;
+        buffered_input_wrapper<input_type, sentinel_type> stream;
         const sentinel_type& end;
 
     public:
-        Lexer(input_type&& stream, const sentinel_type&& end) : stream(buffered_input_wrapper(std::move(stream))), end(end) {}
+        Lexer(input_type&& stream, const sentinel_type&& end) : stream(std::move(stream)), end(end) {}
 };
 
 };
