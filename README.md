@@ -1,2 +1,3 @@
-# phi-math-parser
-A modular math expression parser
+# Phi Math Parser
+
+A mildly opinionated modular math expression parser
